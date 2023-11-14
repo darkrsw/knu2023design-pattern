@@ -34,7 +34,7 @@ import org.apache.tika.utils.CompareUtils;
 public class DefaultTranslator implements Translator {
     private transient final ServiceLoader loader;
 
-    public DefaultTranslator(ServiceLoader loader) {
+    public <T> DefaultTranslator(ServiceLoader loader) throws Exception {
         this.loader = loader;
     }
 
